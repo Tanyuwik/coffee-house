@@ -1,0 +1,154 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100%;
+}
+
+.body_wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--background-body);
+  font-family: var(--heading-font-family);
+}
+
+:root {
+  --background-body: #E1D4C9;
+  --background-container: #665F55;
+  --background-backdrop: rgba(64, 63, 61, 0.80);
+  --text-dark: #403F3D;
+  --text-light: #E1D4C9;
+  --text-accent: #B0907A;
+  --border-light: #C1B6AD;
+  --border-dark: #665F55;
+  --heading-font-family: 'Inter', sans-serif;
+}
+
+/* #region header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px 0 40px;
+  min-height: 80px;
+  max-width: 1440px
+}
+
+.header__top {
+  width: 100px;
+  height: 60px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigationList {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+}
+
+.nav__link {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--text-dark);
+  transition: all 1s ease-out;
+}
+
+.button_coffee {
+  background: transparent;
+  border: none;
+
+}
+
+.coffee_btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-btn {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.icon_coffee {
+  width: 20px;
+  height: 20px;
+}
+
+.burger_menu {
+  display: none;
+}
+
+.burger_cross {
+
+  border: none;
+}
+
+.burger_cross img {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+.burger_cross:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+
+@media (max-width: 1024px) {
+  .navigationList {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: -332px;
+    top: 0;
+    width: 332px;
+    z-index: 1;
+    padding-bottom: 67px;
+    padding-top: 100px;
+    transition: 1s;
+  }
+
+  .nav__link {
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-right: 0;
+    line-height: 50px;
+    align-items: center;
+  }
+
+  .icon_coffee {
+    position: relative;
+    padding-right: 34px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+}
+
+/* #endregion */
