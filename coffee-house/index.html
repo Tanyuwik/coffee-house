@@ -20,7 +20,7 @@
       <div class="navbar">
         <nav class="navbar_header" id="navbar_header">
           <ul class="navigationList">
-            <li><a href="#favorite-coffee" class="nav__link">Favorite coffee</a></li>
+            <li><a href="#favorite" class="nav__link">Favorite coffee</a></li>
             <li><a href="#about" class="nav__link">About</a></li>
             <li><a href="#coffee-shop" class="nav__link">Coffee shop</a></li>
             <li><a href="#mobile-app" class="nav__link">Mobile app</a></li>
@@ -31,18 +31,73 @@
       <div class="coffee_menu_btn">
         <button class="button_coffee" id="img-coffee">
           <div class="coffee_btn">
-            <p class="menu-btn">Menu</p>
-            <img src="images/icon/coffee-cup.png" class="icon_coffee" alt="Coffee icon">
+            <a href="menu.html" class="menu_link">Menu</a>
+            <img src="images/icon/coffee-cup.svg" class="icon_coffee" alt="Coffee icon">
           </div>
         </button>
-
         <div class="burger_menu" id="burger-menu">
           <button class="burger" id="burger"><img src="images/icon/button-icon-burger.png" alt="burger menu"></button>
           <button class="burger_cross" id="cross"></button>
         </div>
       </div>
-
     </header>
+    <main>
+      <section class="premium" id="premium">
+        <div class="premium_coffee">
+          <div class="premium_content">
+            <h1><span>Enjoy</span> premium coffee at our charming cafe</h1>
+            <p class="atmosphere">
+              With its inviting atmosphere and delicious coffee options, the Coffee House Resource
+              is a popular destination for coffee
+              lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
+            </p>
+            <button class="premium_menu">
+              <div class="premium_menu_btn">
+                <a href="menu.html">
+                  Menu
+                  <img src="images/icon/coffee-cup.svg" class="icon_coffee" alt="Coffee icon">
+                </a>
+              </div>
+            </button>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="favorite" id="favorite">
+        <h2>Choose your <span>favorite</span> coffee</h2>
+        <div class="favorite_coffee">
+          <button class="btn_left">
+            <img src="images/icon/button-left.svg" alt="left">
+          </button>
+          <button class="btn_right">
+            <img src="images/icon/button-right.svg" alt="right">
+          </button>
+          <div class="favorite_content">
+            <img src="images/slider/coffee-slider-1.png" alt="coffee">
+            <h3>S’mores Frappuccino</h3>
+            <p class="favorite_info">
+              This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat
+              milk.
+            </p>
+            <p class="favorite_price">$5.50</p>
+            <div class="carousel_dots">
+              <div class="carousel">
+                <div class="carousel_pagination active"></div>
+              </div>
+              <div class="carousel">
+                <div class="carousel_pagination"></div>
+              </div>
+              <div class="carousel">
+                <div class="carousel_pagination"></div>
+              </div>
+            </div>
+
+          </div>
+
+      </section>
+
+    </main>
 
 
   </div>
