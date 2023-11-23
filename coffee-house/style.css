@@ -237,31 +237,35 @@ h1 span {
 
 .premium_menu_btn {
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
+}
+
+.premium_menu:hover a {
+  margin-left: -8px;
+  transition: all 1s ease;
 }
 
 .premium_menu_btn img {
+  position: absolute;
   opacity: 0;
+  left: 260px;
 }
 
-
 .premium_menu:hover img {
-  padding-left: 8px;
   align-items: center;
   opacity: 1;
   transition: all 1s ease;
 }
 
-
 .premium_menu a {
   display: flex;
-  margin-left: -5px;
   text-decoration: none;
   color: var(--text-dark);
   text-align: center;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+  transition: all 1s ease;
 }
 
 /* #endregion */
@@ -294,11 +298,12 @@ svg.btn_left {
 
 .btn_left:hover {
   fill: var(--border-dark);
-
+  transition: all 1s ease;
 }
 
 .btn_left:hover path {
   stroke: var(--text-light);
+  transition: all 1s ease;
 }
 
 svg.btn_right {
@@ -317,6 +322,7 @@ svg.btn_right {
 
 .btn_right:hover path {
   stroke: var(--text-light);
+  transition: all 1s ease;
 }
 
 .favorite_content {
@@ -413,17 +419,24 @@ h2 {
   overflow: hidden;
 }
 
-.foto1 img {
+.foto1 img,
+.foto3 img,
+.foto2 img,
+.foto4 img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   transition: 1s;
   display: block;
+  transform: scale(1.1);
 }
 
 
-.foto1:hover img {
-  transform: scale(0.9);
+.foto1:hover img,
+.foto2:hover img,
+.foto3:hover img,
+.foto4:hover img {
+  transform: scale(1);
 }
 
 .foto2,
@@ -432,21 +445,7 @@ h2 {
   height: 430px;
   border-radius: 20px;
   display: inline-block;
-    overflow: hidden;
-}
-
-.foto3 img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transition: 1s;
-}
-
-.foto2 img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transition: 1s;
+  overflow: hidden;
 }
 
 .foto4 {
@@ -458,12 +457,126 @@ h2 {
   overflow: hidden;
 }
 
-.foto4 img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transition: 1s;
+/* #endregion */
+
+/* #region mobile-app */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.download {
+  width: 630px;
+}
+
+.mobile_app_info {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+
+.ios_btn,
+.google_btn {
+  width: 200px;
+  height: auto;
+  padding: 12px 20px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark);
+  margin-right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.app_store,
+.google_store {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app_info,
+.google_info {
+  text-align: left;
+}
+
+.available {
+  color: var(--text-dark);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+  margin: 0;
+}
+
+.app {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0;
+}
+
+/* #endregion */
+
+/* #region contact */
+footer {
+  margin: 0 40px 0 40px;
+  display: flex;
+  max-width: 1360px;
+  padding: 100px;
+  justify-content: flex-start;
+  gap: 100px;
+  align-items: center;
+  border-radius: 40px;
+  background: var(--background-container);
+  margin-bottom: 40px;
+}
+
+footer h2 {
+  color: var(--text-light);
+}
+
+.social_media_info {
+  width: 530px;
+  text-align: left;
+}
+
+footer button {
+  padding-top: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid var(--border-light);
+  background-color: transparent;
+  margin-right: 12px;
+}
+
+.contact {
+  color: var(--text-light);
+}
+
+.contact_info {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.map, .phone, .hours {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.map a, .phone a, .hours p {
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+  margin: 0;
+}
 
 /* #endregion */
