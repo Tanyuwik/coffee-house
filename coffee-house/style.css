@@ -294,6 +294,7 @@ svg.btn_left {
   margin-top: 290px;
   left: 35px;
   cursor: pointer;
+  transition: all 1s ease;
 }
 
 .btn_left:hover {
@@ -318,6 +319,7 @@ svg.btn_right {
 
 .btn_right:hover {
   fill: var(--border-dark);
+  transition: all 1s ease;
 }
 
 .btn_right:hover path {
@@ -488,6 +490,24 @@ h2 {
   margin-right: 20px;
   background-color: transparent;
   cursor: pointer;
+  transition: all 1s ease;
+}
+
+.ios_btn:hover,
+.google_btn:hover {
+  background-color: var(--border-dark);
+}
+
+.ios_btn:hover path,
+.google_btn:hover path {
+  fill: var(--text-light);
+  transition: all 1s ease;
+}
+
+.ios_btn:hover p,
+.google_btn:hover p {
+  color: var(--text-light);
+  transition: all 1s ease;
 }
 
 .app_store,
@@ -551,6 +571,22 @@ footer button {
   border: 1px solid var(--border-light);
   background-color: transparent;
   margin-right: 12px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.twitter:hover,
+.instagram:hover,
+.facebook:hover {
+  background-color: var(--background-body);
+  transition: all 1s ease;
+}
+
+.twitter:hover path,
+.instagram:hover path,
+.facebook:hover path {
+  stroke: var(--text-dark);
+  transition: all 1s ease;
 }
 
 .contact {
@@ -563,20 +599,239 @@ footer button {
   line-height: 125%;
 }
 
-.map, .phone, .hours {
+.map,
+.phone,
+.hours {
   display: flex;
   gap: 8px;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
 }
 
-.map a, .phone a, .hours p {
+.map_link::after {
+  content: '';
+  position: absolute;
+  background-color: var(--text-light);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -8px;
+  transition: all 0.5s ease;
+}
+
+.map_link:hover::after {
+  width: 70%;
+}
+
+.phone_link::after {
+  content: '';
+  position: absolute;
+  background-color: var(--text-light);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -8px;
+  transition: all 0.5s ease;
+}
+
+.phone_link:hover::after {
+  width: 68%;
+}
+
+.map a,
+.phone a,
+.hours p {
   color: var(--text-light);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
   text-decoration: none;
   margin: 0;
+}
+
+/* #endregion */
+
+/* #region coffee_menu */
+
+.coffee_menu_info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.coffee_menu h1 {
+  color: var(--text-dark);
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 40px;
+}
+
+.coffee_menu_input {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.coffee_button {
+  padding: 8px 16px 8px 8px;
+  height: 46px;
+  border-radius: 100px;
+  background: var(--background-container);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee_store,
+.tea_store,
+.dessert_store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.coffee_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: var(--background-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee_name {
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 0;
+}
+
+.tea_button,
+.dessert_button {
+  padding: 8px 16px 8px 8px;
+  height: 46px;
+  border-radius: 100px;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.tea_button:hover,
+.dessert_button:hover {
+  background-color: var(--background-container);
+  transition: all 1s ease;
+}
+
+.tea_button:hover p,
+.dessert_button:hover p {
+  color: var(--text-light);
+  transition: all 1s ease;
+}
+
+.tea_button:hover .tea_img,
+.dessert_button:hover .dessert_img {
+  background-color: var(--background-body);
+  transition: all 1s ease;
+}
+
+.tea_img,
+.dessert_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: var(--border-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tea_name,
+.dessert_name {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+
+}
+
+.coffee_menu_content {
+  display: flex;
+  max-width: 1360px;
+  height: 1057px;
+  gap: 40px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.drink {
+  width: 310px;
+  border-radius: 40px;
+  border: 1px solid var(--border-light);
+  height: 506px;
+}
+
+.coffee {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.coffee img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  display: block;
+  transform: scale(1.1);
+}
+
+.coffee:hover img {
+  transform: scale(1);
+}
+
+.menu_content_drink {
+  margin: 20px;
+}
+
+.menu_content_name {
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.menu_content_info {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.menu_content_price {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
 }
 
 /* #endregion */
