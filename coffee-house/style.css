@@ -35,8 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 40px 0 40px;
-  min-height: 80px;
+  margin: 19px 36px 0 40px;
   max-width: 1440px
 }
 
@@ -55,6 +54,7 @@ body {
   display: flex;
   list-style-type: none;
   gap: 40px;
+  margin-right: 35px;
 }
 
 .nav__link,
@@ -183,8 +183,8 @@ body {
 
 /* #region premium */
 section {
-  padding: 20px 40px 0 40px;
-  margin-bottom: 100px;
+  padding: 21px 40px 0 40px;
+  margin-bottom: 91px;
 }
 
 .premium_coffee {
@@ -230,7 +230,7 @@ h1 span {
   border-radius: 100px;
   background: var(--background-body);
   width: 200px;
-  padding: 20px 78px;
+  padding: 21px 79px;
   border: none;
   cursor: pointer;
 }
@@ -272,7 +272,7 @@ h1 span {
 
 /* #region favorite */
 .favorite h2 {
-  margin: 0 0 40px 0;
+  margin: -13px 0 40px 0;
   padding: 0;
   text-align: center;
   color: var(--text-dark);
@@ -292,7 +292,7 @@ svg.btn_left {
   height: 60px;
   position: absolute;
   margin-top: 290px;
-  left: 35px;
+  left: 44px;
   cursor: pointer;
   transition: all 1s ease;
 }
@@ -313,7 +313,7 @@ svg.btn_right {
   height: 60px;
   position: absolute;
   margin-top: 290px;
-  left: 92.5%;
+  left: 93%;
   cursor: pointer;
 }
 
@@ -337,10 +337,11 @@ svg.btn_right {
 .favorite_content img {
   width: 480px;
   height: 480px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 h3 {
+  margin-top: 0;
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
@@ -357,6 +358,7 @@ h3 {
 }
 
 .favorite_price {
+  margin-top: 0;
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
@@ -397,7 +399,7 @@ div.active {
 
 /* #region about */
 h2 {
-  margin: 0 0 40px 0;
+  margin: -45px 0 40px 0;
   padding: 0;
   color: var(--text-dark);
   font-size: 60px;
@@ -451,7 +453,7 @@ h2 {
 }
 
 .foto4 {
-  margin-top: -155px;
+  margin-top: -160px;
   width: 660px;
   height: 590px;
   border-radius: 20px;
@@ -466,10 +468,13 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: -12px;
+  padding-bottom: 5px;
 }
 
 .download {
   width: 630px;
+  margin-top: 41px
 }
 
 .mobile_app_info {
@@ -484,10 +489,10 @@ h2 {
 .google_btn {
   width: 200px;
   height: auto;
-  padding: 12px 20px;
+  padding: 11px 20px;
   border-radius: 100px;
   border: 1px solid var(--border-dark);
-  margin-right: 20px;
+  margin-right: 15px;
   background-color: transparent;
   cursor: pointer;
   transition: all 1s ease;
@@ -536,6 +541,7 @@ h2 {
   font-weight: 600;
   line-height: 150%;
   margin: 0;
+  padding-top: 2px;
 }
 
 /* #endregion */
@@ -545,7 +551,7 @@ footer {
   margin: 0 40px 0 40px;
   display: flex;
   max-width: 1360px;
-  padding: 100px;
+  padding: 100px 100px 100px 100px;
   justify-content: flex-start;
   gap: 100px;
   align-items: center;
@@ -559,6 +565,7 @@ footer h2 {
 }
 
 .social_media_info {
+  margin-top: 45px;
   width: 530px;
   text-align: left;
 }
@@ -570,7 +577,7 @@ footer button {
   border-radius: 100px;
   border: 1px solid var(--border-light);
   background-color: transparent;
-  margin-right: 12px;
+  margin-right: 7px;
   cursor: pointer;
   transition: all 1s ease;
 }
@@ -594,6 +601,8 @@ footer button {
 }
 
 .contact_info {
+  margin-bottom: 40px;
+  margin-top: 15px;
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
@@ -678,7 +687,7 @@ footer button {
 }
 
 .coffee_button {
-  padding: 8px 16px 8px 8px;
+  padding: 9px 20px 8px 8px;
   height: 46px;
   border-radius: 100px;
   background: var(--background-container);
@@ -717,7 +726,7 @@ footer button {
 
 .tea_button,
 .dessert_button {
-  padding: 8px 16px 8px 8px;
+  padding: 8px 17px 8px 8px;
   height: 46px;
   border-radius: 100px;
   background: transparent;
@@ -771,9 +780,10 @@ footer button {
   display: flex;
   max-width: 1360px;
   height: 1057px;
-  gap: 40px;
+  gap: 37px;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-bottom: 4px
 }
 
 .drink {
@@ -800,12 +810,20 @@ footer button {
   transform: scale(1.1);
 }
 
-.coffee:hover img {
+.drink:hover img {
   transform: scale(1);
 }
 
 .menu_content_drink {
+  display: flex;
+  flex-direction: column;
   margin: 20px;
+}
+
+.menu_content_title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
 }
 
 .menu_content_name {
@@ -814,7 +832,8 @@ footer button {
   font-weight: 600;
   line-height: 125%;
   margin-bottom: 12px;
-  margin-top: 0;
+  margin-bottom: 12px;
+  margin-top: -4px
 }
 
 .menu_content_info {
@@ -827,7 +846,24 @@ footer button {
 }
 
 .menu_content_price {
+  margin-top: 22px;
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.menu_content_price1 {
   margin: 0;
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+
+.menu_content_price2 {
+  margin-top: 50px;
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
