@@ -6,15 +6,15 @@ body {
   margin: 0 auto;
   max-width: 1440px;
   min-height: 100%;
+  background-color: var(--background-body);
+  font-family: var(--heading-font-family);
+  box-sizing: border-box;
 }
 
 .body_wrapper {
   overflow: hidden;
   position: relative;
   width: 100%;
-  box-sizing: border-box;
-  background-color: var(--background-body);
-  font-family: var(--heading-font-family);
 }
 
 :root {
@@ -54,7 +54,7 @@ body {
   display: flex;
   list-style-type: none;
   gap: 40px;
-  margin-right: 35px;
+  margin-right: 45px;
 }
 
 .nav__link,
@@ -82,7 +82,7 @@ body {
   height: 2px;
   width: 170%;
   left: 0;
-  bottom: -8px;
+  bottom: -6px;
 
 }
 
@@ -113,6 +113,7 @@ body {
 }
 
 .coffee_btn {
+  margin-right: 4px;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -229,7 +230,7 @@ h1 span {
   display: flex;
   border-radius: 100px;
   background: var(--background-body);
-  width: 200px;
+  width: 42px;
   padding: 21px 79px;
   border: none;
   cursor: pointer;
@@ -485,14 +486,18 @@ h2 {
   margin-bottom: 40px;
 }
 
+.button_apps {
+  display: flex;
+  gap: 20px;
+}
+
 .ios_btn,
 .google_btn {
-  width: 200px;
+  width: 159px;
   height: auto;
   padding: 11px 20px;
   border-radius: 100px;
   border: 1px solid var(--border-dark);
-  margin-right: 15px;
   background-color: transparent;
   cursor: pointer;
   transition: all 1s ease;
@@ -597,26 +602,43 @@ footer button {
 }
 
 .contact {
+  margin-top: -28px;
   color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
 }
 
 .contact_info {
-  margin-bottom: 40px;
-  margin-top: 15px;
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
+}
+
+.contact_link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: -24px;
 }
 
 .map,
 .phone,
 .hours {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
-  margin-bottom: 20px;
   position: relative;
 }
+
+
+
+.map img,
+.phone img {
+  margin-right: 7px;
+}
+
+
 
 .map_link::after {
   content: '';
@@ -687,14 +709,15 @@ footer button {
 }
 
 .coffee_button {
-  padding: 9px 20px 8px 8px;
-  height: 46px;
+  padding: 0 19px 0 9px;
+  height: 47px;
   border-radius: 100px;
   background: var(--background-container);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: -5px;
 }
 
 .coffee_store,
@@ -726,7 +749,7 @@ footer button {
 
 .tea_button,
 .dessert_button {
-  padding: 8px 17px 8px 8px;
+  padding: 0 17px 0 8px;
   height: 46px;
   border-radius: 100px;
   background: transparent;

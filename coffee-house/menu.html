@@ -25,18 +25,17 @@
             <li><a href="./#favorite" class="nav__link">Favorite coffee</a></li>
             <li><a href="./#about" class="nav__link">About</a></li>
             <li><a href="./#mobile-app" class="nav__link">Mobile app</a></li>
-            <li><a href="./#contact" class="nav__link">Contact us</a></li>
+            <li><a href="#contact" class="nav__link">Contact us</a></li>
           </ul>
         </nav>
       </div>
       <div class="coffee_menu_btn">
-        <button class="button_coffee" id="img-coffee">
+        <div class="button_coffee" id="img-coffee">
           <span class="coffee_btn">
             <a href="menu.html" class="menu_active">Menu</a>
             <img src="images/icon/coffee-cup.svg" class="icon_coffee" alt="Coffee icon">
           </span>
-        </button>
-
+        </div>
         <div class="burger_menu" id="burger-menu">
           <button class="burger" id="burger"><img src="images/icon/button-icon-burger.png" alt="burger menu"></button>
           <button class="burger_cross" id="cross"></button>
@@ -50,8 +49,8 @@
           <h1>Behind each of our cups hides an <span>amazing surprise</span></h1>
         </div>
         <div class="coffee_menu_input">
-          <button class="coffee_button">
-            <span class="coffee_store">
+          <div class="coffee_button">
+            <div class="coffee_store">
               <span class="coffee_img">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -66,9 +65,9 @@
                 </svg>
               </span>
               <p class="coffee_name">Coffee</p>
-            </span>
-          </button>
-          <button class="tea_button">
+            </div>
+          </div>
+          <div class="tea_button">
             <div class="tea_store">
               <div class="tea_img">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +84,8 @@
               </div>
               <p class="tea_name">Tea</p>
             </div>
-          </button>
-          <button class="dessert_button">
+          </div>
+          <div class="dessert_button">
             <div class="dessert_store">
               <div class="dessert_img">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +102,7 @@
               </div>
               <p class="dessert_name">Dessert</p>
             </div>
-          </button>
+          </div>
         </div>
         <div class="coffee_menu_content">
           <div class="drink">
@@ -221,7 +220,7 @@
           <button class="instagram">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="instagram">
-                <path id="Vector"
+                <path id="Vector1"
                   d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
                   stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round" />
                 <path id="Vector_2"
@@ -235,7 +234,7 @@
           <button class="facebook">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="facebook">
-                <path id="Vector"
+                <path id="Vector2"
                   d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z"
                   stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round" />
               </g>
@@ -245,21 +244,25 @@
       </div>
       <div class="contact">
         <p class="contact_info">Contact us</p>
-        <div class="map">
-          <img src="images/icon/pin-alt.svg" alt="pin">
-          <a class="map_link"
-            href="https://www.google.com/maps/search/8558+Green+Rd.,+LA/@34.0200392,-118.741382,10z/data=!3m1!4b1?entry=ttu"
-            target="_blank">
-            8558 Green Rd., LA
-          </a>
-        </div>
-        <div class="phone">
-          <img src="images/icon/phone.svg" alt="phone">
-          <a class="phone_link" href="tel:+16035550123">+1 (603) 555-0123</a>
-        </div>
-        <div class="hours">
-          <img src="images/icon/clock.svg" alt="clock">
-          <p class="contact_hours">Mon-Sat: 9:00 AM – 23:00 PM</p>
+        <div class="contact_link">
+          <div class="map">
+            <a class="map_link"
+              href="https://www.google.com/maps/search/8558+Green+Rd.,+LA/@34.0200392,-118.741382,10z/data=!3m1!4b1?entry=ttu"
+              target="_blank">
+              <img src="images/icon/pin-alt.svg" alt="pin">
+              8558 Green Rd., LA
+            </a>
+          </div>
+          <div class="phone">
+            <a class="phone_link" href="tel:+16035550123">
+              <img src="images/icon/phone.svg" alt="phone">
+              +1 (603)555-0123
+            </a>
+          </div>
+          <div class="hours">
+            <img src="images/icon/clock.svg" alt="clock">
+            <p class="contact_hours">Mon-Sat: 9:00 AM – 23:00 PM</p>
+          </div>
         </div>
       </div>
     </footer>
