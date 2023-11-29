@@ -75,6 +75,12 @@ body {
   cursor: context-menu;
 }
 
+.icon_coffee_active {
+  margin-bottom: 4px;
+  width: 20px;
+  height: 20px;
+}
+
 .menu_active::after {
   content: '';
   position: absolute;
@@ -89,12 +95,12 @@ body {
 .nav__link::after,
 .menu_link::after {
   content: '';
-  position: absolute;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
   background-color: var(--text-dark);
   height: 2px;
   width: 0;
-  left: 0;
-  bottom: -8px;
   transition: all 0.5s ease;
 }
 
@@ -121,7 +127,7 @@ body {
 }
 
 .icon_coffee {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   width: 20px;
   height: 20px;
 }
@@ -631,43 +637,37 @@ footer button {
   position: relative;
 }
 
-
-
 .map img,
 .phone img {
   margin-right: 7px;
 }
 
-
-
 .map_link::after {
   content: '';
-  position: absolute;
+  display: block;
+  margin: auto;
   background-color: var(--text-light);
   height: 2px;
   width: 0;
-  left: 0;
-  bottom: -8px;
   transition: all 0.5s ease;
 }
 
 .map_link:hover::after {
-  width: 70%;
+  width: 100%;
 }
 
 .phone_link::after {
   content: '';
-  position: absolute;
+  display: block;
+  margin: auto;
   background-color: var(--text-light);
   height: 2px;
   width: 0;
-  left: 0;
-  bottom: -8px;
   transition: all 0.5s ease;
 }
 
 .phone_link:hover::after {
-  width: 68%;
+  width: 100%;
 }
 
 .map a,
