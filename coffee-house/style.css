@@ -115,7 +115,6 @@ body {
 .button_coffee {
   background: transparent;
   border: none;
-
 }
 
 .coffee_btn {
@@ -137,6 +136,7 @@ body {
 }
 
 .burger_cross {
+  display: none;
   border: none;
 }
 
@@ -152,7 +152,23 @@ body {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 790px) {
+  .button_coffee {
+    display: none;
+  }
+
+  .burger_menu {
+    margin-right: 10px;
+    display: block;
+  }
+
+  .burger {
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+  }
+
   .navigationList {
     position: absolute;
     display: flex;
@@ -181,7 +197,6 @@ body {
     position: relative;
     padding-right: 34px;
     z-index: 2;
-    cursor: pointer;
   }
 
 }
@@ -273,6 +288,15 @@ h1 span {
   font-weight: 600;
   line-height: 150%;
   transition: all 1s ease;
+}
+
+
+@media (max-width: 795px) {
+  .premium_coffee {
+    padding: 100px 60px;
+  }
+
+
 }
 
 /* #endregion */
@@ -401,6 +425,14 @@ div.active {
   background: var(--border-light);
 }
 
+
+@media (max-width: 890px) {
+  svg.btn_right {
+    left: 87%;
+    cursor: none;
+  }
+}
+
 /* #endregion */
 
 
@@ -466,6 +498,22 @@ h2 {
   border-radius: 20px;
   display: inline-block;
   overflow: hidden;
+}
+
+@media (max-width: 890px) {
+  .foto1 {
+    width: 688px;
+  }
+
+  .foto4 {
+    margin-top: 0;
+    width: 688px;
+  }
+
+  .foto2,
+  .foto3 {
+    display: none;
+  }
 }
 
 /* #endregion */
@@ -553,6 +601,19 @@ h2 {
   line-height: 150%;
   margin: 0;
   padding-top: 2px;
+}
+
+
+@media (max-width: 890px) {
+  .container {
+    flex-direction: column;
+    margin-top: -8px;
+    gap: 100px;
+  }
+
+  .download {
+    width: 688px;
+  }
 }
 
 /* #endregion */
@@ -679,6 +740,31 @@ footer button {
   line-height: 150%;
   text-decoration: none;
   margin: 0;
+}
+
+@media (max-width: 890px) {
+  footer {
+    padding: 100px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch;
+  }
+
+  .social_media_info {
+    width: 568px
+  }
+
+  .contact {
+    margin-top: -21px;
+    margin-right: 304px
+  }
+
+  .contact_link {
+    margin-top: -29px;
+
+  }
 }
 
 /* #endregion */
