@@ -763,7 +763,6 @@ footer button {
 
   .contact_link {
     margin-top: -29px;
-
   }
 }
 
@@ -895,7 +894,14 @@ footer button {
   padding-bottom: 4px
 }
 
-.drink {
+.drink1,
+.drink2,
+.drink3,
+.drink4,
+.drink5,
+.drink6,
+.drink7,
+.drink8 {
   width: 310px;
   border-radius: 40px;
   border: 1px solid var(--border-light);
@@ -977,6 +983,39 @@ footer button {
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
+}
+
+.drink_refresh {
+  display: none;
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+@media (max-width: 890px) {
+  .coffee_menu_info {
+    width: 688px;
+  }
+
+  .coffee_menu_content {
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 189px;
+  }
+
+  .drink2,
+  .drink4,
+  .drink6,
+  .drink8 {
+    display: none;
+  }
+
+  .drink_refresh {
+    display: block;
+  }
+
 }
 
 /* #endregion */
