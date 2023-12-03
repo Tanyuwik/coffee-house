@@ -303,13 +303,37 @@ h1 span {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 715px) {
+  h1 {
+    font-size: 62px;
+  }
+}
+
+@media (max-width: 629px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 614px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 587px) {
+  h1 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 559px) {
+
   section {
     padding: 20px 16px 0 16px;
   }
 
   .premium_coffee {
-    width: 316px;
     height: 433px;
     padding: 60px 16px;
   }
@@ -462,7 +486,7 @@ div.active {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 550px) {
   .favorite h2 {
     font-size: 32px;
   }
@@ -566,6 +590,12 @@ h2 {
   .foto2,
   .foto3 {
     display: none;
+  }
+}
+
+@media (max-width: 585px) {
+  h2 {
+    font-size: 42px;
   }
 }
 
@@ -681,7 +711,23 @@ h2 {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 725px) {
+  .download {
+    width: 600px;
+  }
+}
+
+@media (max-width: 620px) {
+  .download {
+    width: 500px;
+  }
+
+  .foto_mobile img {
+    width: 448px;
+  }
+}
+
+@media (max-width: 540px) {
   .container {
     gap: 39px;
   }
@@ -854,23 +900,88 @@ footer button {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 767px) {
+  .contact {
+    margin-right: 300px
+  }
+}
+
+@media (max-width: 763px) {
+  .contact {
+    margin-right: 250px
+  }
+}
+
+@media (max-width: 713px) {
+  .contact {
+    margin-right: 220px
+  }
+}
+
+@media (max-width: 683px) {
+
   footer {
-    padding: 60px 16px;
+    padding: 61px 16px;
     gap: 40px;
-    margin: 0 16px 0 16px;
+    margin: 0 16px 40px 16px;
   }
 
   .social_media_info {
-    width: 348px;
     padding-left: 30px;
+  }
+
+  .contact {
+    margin-right: 200px
+  }
+}
+
+@media (max-width: 586px) {
+  .social_media_info {
+    width: 488px;
+  }
+
+  .contact {
+    margin-right: 140px
+  }
+}
+
+@media (max-width: 500px) {
+  .social_media_info {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact {
+    margin-right: 70px
+  }
+}
+
+@media (max-width: 435px) {
+
+  .social_media_info {
+    width: 348px;
   }
 
   .contact {
     margin-right: 52px;
   }
 
-  
+}
+
+@media (max-width: 408px) {
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .contact {
+    margin-right: 52px;
+  }
+
+  .phone {
+    margin-bottom: -3px;
+  }
 
 }
 
@@ -1069,7 +1180,7 @@ footer button {
 }
 
 .menu_content_price {
-  margin-top: 22px;
+  margin-top: 25px;
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
@@ -1102,11 +1213,7 @@ footer button {
   background-color: transparent;
 }
 
-@media (max-width: 890px) {
-  .coffee_menu_info {
-    width: 688px;
-  }
-
+@media (max-width: 1068px) {
   .coffee_menu_content {
     justify-content: center;
     flex-direction: row;
@@ -1121,9 +1228,70 @@ footer button {
   }
 
   .drink_refresh {
+    width: 300px;
     display: block;
+    margin: auto;
+    text-align: center;
   }
 
+  .drink_refresh img {
+    margin-top: -14px;
+  }
 }
+
+@media (max-width: 890px) {
+  .coffee_menu_info {
+    width: 688px;
+  }
+
+  .coffee_menu_content {
+    margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 741px) {
+  .coffee_menu_info {
+    width: 388px;
+  }
+
+  .coffee_menu h1 {
+    font-size: 32px;
+  }
+
+  .coffee_menu_content {
+    margin-bottom: 1130px;
+  }
+}
+
+@media (max-width: 647px) {
+  .coffee_menu_info {
+    width: 388px;
+  }
+}
+
+@media (max-width: 505px) {
+  .coffee_menu_info {
+    width: 388px;
+  }
+}
+
+@media (max-width: 410px) {
+
+  .coffee_menu_info {
+    width: 348px;
+  }
+
+  .coffee_menu_input {
+    gap: 8px;
+  }
+
+  .coffee_menu h1 {
+    font-size: 32px;
+  }
+
+
+}
+
+@media (hover:none) {}
 
 /* #endregion */
