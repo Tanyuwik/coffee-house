@@ -1127,17 +1127,10 @@ footer button {
   background-color: transparent;
 }
 
-@media (max-width: 1068px) {
-  .coffee_menu_content {
-    justify-content: center;
-    flex-direction: row;
-    margin-bottom: 189px;
-  }
+@media (max-width: 1420px) {
 
   .drink2,
-  .drink4,
-  .drink6,
-  .drink8 {
+  .drink6 {
     display: none;
   }
 
@@ -1146,6 +1139,19 @@ footer button {
     display: block;
     margin: auto;
     text-align: center;
+  }
+}
+
+@media (max-width: 1068px) {
+  .coffee_menu_content {
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 78px;
+  }
+
+  .drink4,
+  .drink8 {
+    display: none;
   }
 
   .drink_refresh img {
