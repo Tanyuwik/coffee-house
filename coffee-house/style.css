@@ -104,18 +104,9 @@ body {
   transition: all 0.5s ease;
 }
 
-.nav__link:hover::after {
-  width: 100%;
-}
-
-.menu_link:hover::after {
-  width: 170%;
-}
-
 .button_coffee {
   background: transparent;
   border: none;
-
 }
 
 .coffee_btn {
@@ -137,6 +128,7 @@ body {
 }
 
 .burger_cross {
+  display: none;
   border: none;
 }
 
@@ -146,20 +138,30 @@ body {
   height: 32px;
 }
 
-.burger_cross:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
+@media (max-width: 790px) {
+  .button_coffee {
+    display: none;
+  }
 
+  .burger_menu {
+    margin-right: 10px;
+    display: block;
+  }
 
-@media (max-width: 1024px) {
+  .burger {
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+  }
+
   .navigationList {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    right: -332px;
+    right: -430px;
     top: 0;
     width: 332px;
     z-index: 1;
@@ -181,9 +183,13 @@ body {
     position: relative;
     padding-right: 34px;
     z-index: 2;
-    cursor: pointer;
   }
+}
 
+@media (max-width: 380px) {
+  .header {
+    margin: 20px 12px 0 16px;
+  }
 }
 
 /* #endregion */
@@ -247,21 +253,10 @@ h1 span {
   gap: 8px;
 }
 
-.premium_menu:hover a {
-  margin-left: -8px;
-  transition: all 1s ease;
-}
-
 .premium_menu_btn img {
   position: absolute;
   opacity: 0;
   left: 260px;
-}
-
-.premium_menu:hover img {
-  align-items: center;
-  opacity: 1;
-  transition: all 1s ease;
 }
 
 .premium_menu a {
@@ -273,6 +268,76 @@ h1 span {
   font-weight: 600;
   line-height: 150%;
   transition: all 1s ease;
+}
+
+@media (max-width: 795px) {
+  .premium_coffee {
+    padding: 100px 60px;
+  }
+
+  .premium_menu a {
+    margin-left: -15px;
+    transition: none;
+  }
+
+  .premium_menu_btn img {
+    opacity: 1;
+    left: 216px;
+  }
+}
+
+@media (max-width: 715px) {
+  h1 {
+    font-size: 62px;
+  }
+}
+
+@media (max-width: 629px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 614px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 587px) {
+  h1 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 559px) {
+
+  section {
+    padding: 20px 16px 0 16px;
+  }
+
+  .premium_coffee {
+    height: 433px;
+    padding: 60px 16px;
+  }
+
+  .premium_content {
+    width: 316px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 115%;
+  }
+
+  .premium_menu {
+    padding: 19px 79px;
+  }
+
+  .premium_menu_btn img {
+    opacity: 1;
+    left: 148px;
+  }
 }
 
 /* #endregion */
@@ -304,16 +369,6 @@ svg.btn_left {
   transition: all 1s ease;
 }
 
-.btn_left:hover {
-  fill: var(--border-dark);
-  transition: all 1s ease;
-}
-
-.btn_left:hover path {
-  stroke: var(--text-light);
-  transition: all 1s ease;
-}
-
 svg.btn_right {
   display: inline-block;
   width: 60px;
@@ -322,16 +377,6 @@ svg.btn_right {
   margin-top: 290px;
   left: 93%;
   cursor: pointer;
-}
-
-.btn_right:hover {
-  fill: var(--border-dark);
-  transition: all 1s ease;
-}
-
-.btn_right:hover path {
-  stroke: var(--text-light);
-  transition: all 1s ease;
 }
 
 .favorite_content {
@@ -401,8 +446,44 @@ div.active {
   background: var(--border-light);
 }
 
-/* #endregion */
 
+@media (max-width: 890px) {
+
+  svg.btn_left {
+    left: 40px;
+  }
+
+  svg.btn_right {
+    left: 87%;
+    cursor: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .favorite h2 {
+    font-size: 32px;
+  }
+
+  svg.btn_right {
+    display: none;
+  }
+
+  svg.btn_left {
+    display: none;
+  }
+
+  .favorite_content {
+    width: 348px;
+
+  }
+
+  .favorite_content img {
+    width: 348px;
+    height: 348px;
+  }
+}
+
+/* #endregion */
 
 /* #region about */
 h2 {
@@ -418,7 +499,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1360px;
+  max-width: 100%;
   flex-wrap: wrap;
 }
 
@@ -442,14 +523,6 @@ h2 {
   transform: scale(1.1);
 }
 
-
-.foto1:hover img,
-.foto2:hover img,
-.foto3:hover img,
-.foto4:hover img {
-  transform: scale(1);
-}
-
 .foto2,
 .foto3 {
   width: 660px;
@@ -466,6 +539,51 @@ h2 {
   border-radius: 20px;
   display: inline-block;
   overflow: hidden;
+}
+
+@media (max-width: 1439px) {
+
+  .about_foto {
+    justify-content: center;
+  }
+
+  .foto4 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 890px) {
+  .foto1 {
+    width: 688px;
+  }
+
+  .foto4 {
+    margin-top: 0;
+    width: 688px;
+  }
+
+  .foto2,
+  .foto3 {
+    display: none;
+  }
+}
+
+@media (max-width: 585px) {
+  h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 380px) {
+  h2 {
+    width: 348px;
+    font-size: 32px;
+  }
+
+  .foto1 img,
+  .foto4 img {
+    transform: scale(1.2);
+  }
 }
 
 /* #endregion */
@@ -509,23 +627,6 @@ h2 {
   transition: all 1s ease;
 }
 
-.ios_btn:hover,
-.google_btn:hover {
-  background-color: var(--border-dark);
-}
-
-.ios_btn:hover path,
-.google_btn:hover path {
-  fill: var(--text-light);
-  transition: all 1s ease;
-}
-
-.ios_btn:hover p,
-.google_btn:hover p {
-  color: var(--text-light);
-  transition: all 1s ease;
-}
-
 .app_store,
 .google_store {
   display: flex;
@@ -553,6 +654,56 @@ h2 {
   line-height: 150%;
   margin: 0;
   padding-top: 2px;
+}
+
+@media (max-width: 1095px) {
+  .container {
+    flex-direction: column;
+    margin-top: -8px;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 890px) {
+  .download {
+    width: 688px;
+  }
+}
+
+@media (max-width: 725px) {
+  .download {
+    width: 600px;
+  }
+}
+
+@media (max-width: 620px) {
+  .download {
+    width: 500px;
+  }
+
+  .foto_mobile img {
+    width: 448px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    gap: 39px;
+  }
+
+  .download {
+    width: 348px;
+    margin-top: 44px;
+  }
+
+  .button_apps {
+    flex-direction: column;
+    margin-top: 42px;
+  }
+
+  .foto_mobile img {
+    width: 348px;
+  }
 }
 
 /* #endregion */
@@ -590,20 +741,6 @@ footer button {
   background-color: transparent;
   margin-right: 7px;
   cursor: pointer;
-  transition: all 1s ease;
-}
-
-.twitter:hover,
-.instagram:hover,
-.facebook:hover {
-  background-color: var(--background-body);
-  transition: all 1s ease;
-}
-
-.twitter:hover path,
-.instagram:hover path,
-.facebook:hover path {
-  stroke: var(--text-dark);
   transition: all 1s ease;
 }
 
@@ -652,10 +789,6 @@ footer button {
   transition: all 0.5s ease;
 }
 
-.map_link:hover::after {
-  width: 100%;
-}
-
 .phone_link::after {
   content: '';
   display: block;
@@ -664,10 +797,6 @@ footer button {
   height: 2px;
   width: 0;
   transition: all 0.5s ease;
-}
-
-.phone_link:hover::after {
-  width: 100%;
 }
 
 .map a,
@@ -679,6 +808,119 @@ footer button {
   line-height: 150%;
   text-decoration: none;
   margin: 0;
+}
+
+@media (max-width: 1173px) {
+  footer {
+    padding: 101px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 890px) {
+
+  .social_media_info {
+    width: 568px
+  }
+
+  .contact {
+    margin-top: -21px;
+    margin-right: 304px
+  }
+
+  .contact_link {
+    margin-top: -29px;
+  }
+
+  .phone {
+    margin-bottom: -3px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    margin-right: 300px
+  }
+}
+
+@media (max-width: 763px) {
+  .contact {
+    margin-right: 250px
+  }
+}
+
+@media (max-width: 713px) {
+  .contact {
+    margin-right: 220px
+  }
+}
+
+@media (max-width: 683px) {
+
+  footer {
+    padding: 61px 16px;
+    gap: 40px;
+    margin: 0 16px 40px 16px;
+  }
+
+  .social_media_info {
+    padding-left: 30px;
+  }
+
+  .contact {
+    margin-right: 200px
+  }
+}
+
+@media (max-width: 586px) {
+  .social_media_info {
+    width: 488px;
+  }
+
+  .contact {
+    margin-right: 140px
+  }
+}
+
+@media (max-width: 500px) {
+  .social_media_info {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact {
+    margin-right: 70px
+  }
+}
+
+@media (max-width: 435px) {
+  .social_media_info {
+    width: 348px;
+  }
+
+  .contact {
+    margin-right: 52px;
+  }
+}
+
+@media (max-width: 408px) {
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .contact {
+    margin-right: 52px;
+  }
+
+  .phone {
+    margin-bottom: -3px;
+  }
 }
 
 /* #endregion */
@@ -761,24 +1003,6 @@ footer button {
   transition: all 1s ease;
 }
 
-.tea_button:hover,
-.dessert_button:hover {
-  background-color: var(--background-container);
-  transition: all 1s ease;
-}
-
-.tea_button:hover p,
-.dessert_button:hover p {
-  color: var(--text-light);
-  transition: all 1s ease;
-}
-
-.tea_button:hover .tea_img,
-.dessert_button:hover .dessert_img {
-  background-color: var(--background-body);
-  transition: all 1s ease;
-}
-
 .tea_img,
 .dessert_img {
   width: 30px;
@@ -796,7 +1020,6 @@ footer button {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
-
 }
 
 .coffee_menu_content {
@@ -806,10 +1029,17 @@ footer button {
   gap: 37px;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-bottom: 4px
+  padding-bottom: 4px;
 }
 
-.drink {
+.drink1,
+.drink2,
+.drink3,
+.drink4,
+.drink5,
+.drink6,
+.drink7,
+.drink8 {
   width: 310px;
   border-radius: 40px;
   border: 1px solid var(--border-light);
@@ -833,10 +1063,6 @@ footer button {
   transform: scale(1.1);
 }
 
-.drink:hover img {
-  transform: scale(1);
-}
-
 .menu_content_drink {
   display: flex;
   flex-direction: column;
@@ -856,7 +1082,7 @@ footer button {
   line-height: 125%;
   margin-bottom: 12px;
   margin-bottom: 12px;
-  margin-top: -4px
+  margin-top: -4px;
 }
 
 .menu_content_info {
@@ -869,7 +1095,7 @@ footer button {
 }
 
 .menu_content_price {
-  margin-top: 22px;
+  margin-top: 25px;
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
@@ -884,13 +1110,338 @@ footer button {
   line-height: 125%;
 }
 
-
 .menu_content_price2 {
   margin-top: 50px;
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
+}
+
+.drink_refresh {
+  display: none;
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+@media (max-width: 1068px) {
+  .coffee_menu_content {
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 189px;
+  }
+
+  .drink2,
+  .drink4,
+  .drink6,
+  .drink8 {
+    display: none;
+  }
+
+  .drink_refresh {
+    width: 300px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .drink_refresh img {
+    margin-top: -14px;
+  }
+}
+
+@media (max-width: 890px) {
+  .coffee_menu_info {
+    width: 688px;
+  }
+
+  .coffee_menu_content {
+    margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 741px) {
+  .coffee_menu_info {
+    width: 388px;
+  }
+
+  .coffee_menu h1 {
+    font-size: 32px;
+  }
+
+  .coffee_menu_content {
+    margin-bottom: 1130px;
+  }
+}
+
+@media (max-width: 647px) {
+  .coffee_menu_info {
+    width: 388px;
+  }
+}
+
+@media (max-width: 505px) {
+  .coffee_menu_info {
+    width: 388px;
+  }
+}
+
+@media (max-width: 410px) {
+
+  .coffee_menu_info {
+    width: 348px;
+  }
+
+  .coffee_menu_input {
+    gap: 8px;
+  }
+
+  .coffee_menu h1 {
+    font-size: 32px;
+  }
+}
+
+@media (hover:hover) {
+  .nav__link:hover::after {
+    width: 100%;
+  }
+
+  .menu_link:hover::after {
+    width: 170%;
+  }
+
+  .burger_cross:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
+  .premium_menu:hover a {
+    margin-left: -8px;
+    transition: all 1s ease;
+  }
+
+  .premium_menu:hover img {
+    align-items: center;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  .btn_left:hover {
+    fill: var(--border-dark);
+    transition: all 1s ease;
+  }
+
+  .btn_left:hover path {
+    stroke: var(--text-light);
+    transition: all 1s ease;
+  }
+
+  .btn_right:hover {
+    fill: var(--border-dark);
+    transition: all 1s ease;
+  }
+
+  .btn_right:hover path {
+    stroke: var(--text-light);
+    transition: all 1s ease;
+  }
+
+  .foto1:hover img,
+  .foto2:hover img,
+  .foto3:hover img,
+  .foto4:hover img {
+    transform: scale(1);
+  }
+
+  .ios_btn:hover,
+  .google_btn:hover {
+    background-color: var(--border-dark);
+  }
+
+  .ios_btn:hover path,
+  .google_btn:hover path {
+    fill: var(--text-light);
+    transition: all 1s ease;
+  }
+
+  .ios_btn:hover p,
+  .google_btn:hover p {
+    color: var(--text-light);
+    transition: all 1s ease;
+  }
+
+  .twitter:hover,
+  .instagram:hover,
+  .facebook:hover {
+    background-color: var(--background-body);
+    transition: all 1s ease;
+  }
+
+  .twitter:hover path,
+  .instagram:hover path,
+  .facebook:hover path {
+    stroke: var(--text-dark);
+    transition: all 1s ease;
+  }
+
+  .map_link:hover::after {
+    width: 100%;
+  }
+
+  .phone_link:hover::after {
+    width: 100%;
+  }
+
+  .tea_button:hover,
+  .dessert_button:hover {
+    background-color: var(--background-container);
+    transition: all 1s ease;
+  }
+
+  .tea_button:hover p,
+  .dessert_button:hover p {
+    color: var(--text-light);
+    transition: all 1s ease;
+  }
+
+  .tea_button:hover .tea_img,
+  .dessert_button:hover .dessert_img {
+    background-color: var(--background-body);
+    transition: all 1s ease;
+  }
+
+  .drink1:hover img,
+  .drink2:hover img,
+  .drink3:hover img,
+  .drink4:hover img,
+  .drink5:hover img,
+  .drink6:hover img,
+  .drink7:hover img,
+  .drink8:hover img {
+    transform: scale(1);
+  }
+}
+
+@media (hover:none) {
+  .nav__link:hover::after {
+    width: 0;
+  }
+
+  .menu_link:hover::after {
+    width: 0;
+  }
+
+  .burger_cross:hover {
+    transition: none;
+  }
+
+  .premium_menu:hover a {
+    transition: none;
+  }
+
+  .premium_menu:hover img {
+    align-items: center;
+    opacity: 1;
+    transition: none;
+  }
+
+  .btn_left:hover {
+    fill: transparent;
+    transition: none;
+  }
+
+  .btn_left:hover path {
+    stroke: var(--text-dark);
+    transition: none;
+  }
+
+  .btn_right:hover {
+    fill: transparent;
+    transition: none;
+  }
+
+  .btn_right:hover path {
+    stroke: var(--text-dark);
+    transition: none;
+  }
+
+  .foto1:hover img,
+  .foto2:hover img,
+  .foto3:hover img,
+  .foto4:hover img {
+    transform: scale(1.1);
+  }
+
+  .ios_btn:hover,
+  .google_btn:hover {
+    background-color: transparent;
+  }
+
+  .ios_btn:hover path,
+  .google_btn:hover path {
+    fill: var(--text-dark);
+    transition: none;
+  }
+
+  .ios_btn:hover p,
+  .google_btn:hover p {
+    color: var(--text-dark);
+    transition: none;
+  }
+
+  .twitter:hover,
+  .instagram:hover,
+  .facebook:hover {
+    background-color: transparent;
+    transition: none;
+  }
+
+  .twitter:hover path,
+  .instagram:hover path,
+  .facebook:hover path {
+    stroke: var(--text-light);
+    transition: none;
+  }
+
+  .map_link:hover::after {
+    width: 0;
+  }
+
+  .phone_link:hover::after {
+    width: 0;
+  }
+
+  .tea_button:hover,
+  .dessert_button:hover {
+    background-color: transparent;
+    transition: none;
+  }
+
+  .tea_button:hover p,
+  .dessert_button:hover p {
+    color: var(--text-dark);
+    transition: none;
+  }
+
+  .tea_button:hover .tea_img,
+  .dessert_button:hover .dessert_img {
+    background-color: var(--border-light);
+    transition: none;
+  }
+
+  .drink1:hover img,
+  .drink2:hover img,
+  .drink3:hover img,
+  .drink4:hover img,
+  .drink5:hover img,
+  .drink6:hover img,
+  .drink7:hover img,
+  .drink8:hover img {
+    transform: scale(1.1);
+  }
 }
 
 /* #endregion */
