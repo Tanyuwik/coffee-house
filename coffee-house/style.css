@@ -89,7 +89,6 @@ body {
   width: 170%;
   left: 0;
   bottom: -6px;
-
 }
 
 .nav__link::after,
@@ -201,19 +200,34 @@ section {
 }
 
 .premium_coffee {
-  background-image: url(images/img-hero.jpg);
-  height: 445px;
+  position: relative;
+  height: 444px;
   display: flex;
   max-width: 1360px;
   padding: 100px;
+  z-index: 1;
+  overflow: hidden;
   border-radius: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.video_premium {
+  object-fit: cover;
+  height: 100%;
+}
+
+
+.premium_coffee video {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .premium_content {
   width: 530px;
+  z-index: 2;
 }
 
 h1 {
@@ -256,7 +270,7 @@ h1 span {
 .premium_menu_btn img {
   position: absolute;
   opacity: 0;
-  left: 260px;
+  left: 223px;
 }
 
 .premium_menu a {
@@ -282,7 +296,7 @@ h1 span {
 
   .premium_menu_btn img {
     opacity: 1;
-    left: 216px;
+    left: 178px;
   }
 }
 
