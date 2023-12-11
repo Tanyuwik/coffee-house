@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="512x512" href="./images/icon/android-chrome-512x512.png">
   <title>Coffee House</title>
@@ -21,11 +21,15 @@
       </div>
       <div class="navbar">
         <nav class="navbar_header" id="navbar_header">
-          <ul class="navigationList">
+          <ul class="navigationList" id="navigationList">
             <li><a href="./#favorite" class="nav__link">Favorite coffee</a></li>
             <li><a href="./#about" class="nav__link">About</a></li>
             <li><a href="./#mobile-app" class="nav__link">Mobile app</a></li>
             <li><a href="#contact" class="nav__link">Contact us</a></li>
+            <li class="menuBurger">
+              <a href="menu.html" class="menu_active">Menu</a>
+              <img src="images/icon/coffee-cup.svg" class="icon_coffee" alt="Coffee icon">
+            </li>
           </ul>
         </nav>
       </div>
@@ -37,8 +41,9 @@
           </span>
         </div>
         <div class="burger_menu" id="burger-menu">
-          <button class="burger" id="burger"><img src="images/icon/burger.svg" alt="burger menu"></button>
-          <button class="burger_cross" id="cross"></button>
+          <button class="burger" id="burger">
+            <span></span><span></span>
+          </button>
         </div>
       </div>
 
@@ -202,7 +207,7 @@
             </div>
           </div>
         </div>
-        <button class="drink_refresh">
+        <button class="drink_refresh" onclick="toggleMenu()">
           <img src="images/icon/button-icon-dark.svg" alt="refresh">
         </button>
       </section>
