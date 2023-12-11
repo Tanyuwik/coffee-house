@@ -72,7 +72,6 @@ function resetAutoChangeInterval() {
   autoChangeInterval = setInterval(() => changeSlide(1), 6000);
 }
 
-// Обработчик событий для клавиш влево и вправо
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") {
     changeSlide(1);
@@ -81,18 +80,15 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Останавливаем автоматическое переключение при наведении мыши
 sliderContent.addEventListener("mouseover", () =>
   clearInterval(autoChangeInterval)
 );
 
-// Возобновляем автоматическое переключение при убирании мыши
 sliderContent.addEventListener("mouseout", () => {
   resetAutoChangeInterval();
   updateActiveDot();
 });
 
-// Запускаем автоматическое переключение при загрузке страницы
 resetAutoChangeInterval();
 
 // тач
@@ -127,7 +123,6 @@ function handleTouchEnd() {
 //кнопка "refresh"
 
 function toggleMenu() {
-  // Переключаем класс show для .drink4 и .drink8
   const drink4 = document.querySelector(".drink4");
   drink4.classList.toggle("show");
 
@@ -140,21 +135,17 @@ function toggleMenu() {
   const drink6 = document.querySelector(".drink6");
   drink6.classList.toggle("show");
 
-  // Добавляем класс additional-margin к элементу с классом coffee_menu_content
   const coffeeMenu = document.querySelector(".coffee_menu_content");
   coffeeMenu.classList.toggle("additional-margin");
 
-  // Переключаем класс hide для кнопки "refresh"
   const toggleButton = document.querySelector(".drink_refresh");
   toggleButton.classList.toggle("hide");
 
-  // Добавляем стиль display: none к кнопке
   if (toggleButton.classList.contains("hide")) {
     toggleButton.style.display = "none";
   } else {
-    toggleButton.style.display = "block"; // или "inline" в зависимости от типа кнопки
+    toggleButton.style.display = "block";
   }
 }
 
-// Вызываем toggleMenu, чтобы применить начальные стили
 toggleMenu();
