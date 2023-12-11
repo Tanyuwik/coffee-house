@@ -234,7 +234,7 @@ body {
 }
 
 @media (max-width: 690px) {
-.navigationList {
+  .navigationList {
     right: -860px;
   }
 }
@@ -442,7 +442,9 @@ h2 span {
   color: var(--text-accent);
 }
 
-svg.btn_left {
+.image_left {
+  background-color: transparent;
+  border: none;
   display: block;
   width: 60px;
   height: 60px;
@@ -453,12 +455,14 @@ svg.btn_left {
   transition: all 1s ease;
 }
 
-svg.btn_right {
-  display: inline-block;
+.image_right {
+  background-color: transparent;
+  border: none;
+  display: block;
   width: 60px;
-  height: 60px;
+  height: 69px;
   position: absolute;
-  margin-top: 290px;
+  margin-top: 285px;
   left: 93%;
   cursor: pointer;
 }
@@ -466,8 +470,18 @@ svg.btn_right {
 .favorite_content {
   position: relative;
   width: 480px;
+  overflow: hidden;
   margin: auto;
   text-align: center;
+}
+
+.carousel_line {
+  display: flex;
+  transition: all 1s ease;
+}
+
+.carousel_content {
+  width: 100%;
 }
 
 .favorite_content img {
@@ -517,28 +531,53 @@ h3 {
   margin-left: 3px;
 }
 
-div.active {
-  width: 40px;
-  height: 4px;
-  background: var(--border-dark);
-}
-
 .carousel_pagination {
   border-radius: 100px;
   width: 40px;
   height: 4px;
   background: var(--border-light);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background-color: var(--border-dark);
+}
+
+.fill.animate {
+  animation: fillAnimation 6s linear infinite;
+}
+
+@keyframes fillAnimation {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .image_right {
+    left: 88%;
+    cursor: none;
+  }
 }
 
 
 @media (max-width: 890px) {
 
-  svg.btn_left {
-    left: 40px;
+  .image_right {
+    left: 86%;
+    cursor: none;
   }
+}
 
-  svg.btn_right {
-    left: 87%;
+@media (max-width: 780px) {
+  .image_right {
+    left: 82%;
     cursor: none;
   }
 }
@@ -548,11 +587,11 @@ div.active {
     font-size: 32px;
   }
 
-  svg.btn_right {
+  .image_right {
     display: none;
   }
 
-  svg.btn_left {
+  .image_left {
     display: none;
   }
 
@@ -1211,6 +1250,10 @@ footer button {
   background-color: transparent;
 }
 
+.coffee_menu_content.additional-margin {
+  margin-bottom: 165%;
+}
+
 @media (max-width: 1420px) {
 
   .drink2,
@@ -1238,6 +1281,13 @@ footer button {
     display: none;
   }
 
+  .drink4.show,
+  .drink8.show,
+  .drink2.show,
+  .drink6.show {
+    display: block;
+  }
+
   .drink_refresh img {
     margin-top: -14px;
   }
@@ -1252,6 +1302,9 @@ footer button {
     margin-bottom: 38px;
   }
 }
+
+ 
+ 
 
 @media (max-width: 741px) {
   .coffee_menu_info {
@@ -1319,22 +1372,22 @@ footer button {
     transition: all 1s ease;
   }
 
-  .btn_left:hover {
+  .image_left svg:hover {
     fill: var(--border-dark);
     transition: all 1s ease;
   }
 
-  .btn_left:hover path {
+  .image_left svg:hover path {
     stroke: var(--text-light);
     transition: all 1s ease;
   }
 
-  .btn_right:hover {
+  .image_right svg:hover {
     fill: var(--border-dark);
     transition: all 1s ease;
   }
 
-  .btn_right:hover path {
+  .image_right svg:hover path {
     stroke: var(--text-light);
     transition: all 1s ease;
   }
@@ -1438,22 +1491,22 @@ footer button {
     transition: none;
   }
 
-  .btn_left:hover {
+  .image_left svg:hover {
     fill: transparent;
     transition: none;
   }
 
-  .btn_left:hover path {
+  .image_left svg:hover path {
     stroke: var(--text-dark);
     transition: none;
   }
 
-  .btn_right:hover {
+  .image_right svg:hover {
     fill: transparent;
     transition: none;
   }
 
-  .btn_right:hover path {
+  .image_right svg:hover path {
     stroke: var(--text-dark);
     transition: none;
   }
