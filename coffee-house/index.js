@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger").addEventListener("click", function () {
     header.classList.toggle("open");
     document.body.classList.toggle(
-      "show-menu",
+      "show-burger",
       header.classList.contains("open")
     );
   });
