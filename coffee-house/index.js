@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header");
 
-  document.getElementById("burger").addEventListener("click", function () {
-    header.classList.toggle("open");
-    document.body.classList.toggle(
-      "show-burger",
-      header.classList.contains("open")
-    );
-    document.body.classList.remove("show-burger");
-  });
+ document.getElementById("burger").addEventListener("click", function () {
+   header.classList.toggle("open");
+   document.body.classList.toggle(
+     "show-burger",
+     header.classList.contains("open")
+   );
+ });
 
   document
     .getElementById("navigationList")
@@ -24,24 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
   menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
       header.classList.remove("open");
-      document.body.classList.remove("show-menu");
+      document.body.classList.remove("show-burger");
     });
   });
 
-  document.body.addEventListener("click", (event) => {
-    if (event._isClickWithInMenu) return;
-    header.classList.remove("open");
-    document.body.classList.remove("show-menu");
-  });
+ 
 
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       header.classList.remove("open");
-      document.body.classList.remove("show-menu");
+      document.body.classList.remove("show-burger");
     }
   });
 
-  showMenu("coffee-menu");
+  showMenu("coffee-burger");
 });
 
 //карусель
