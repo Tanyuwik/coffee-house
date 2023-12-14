@@ -1,33 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header");
+
   document.getElementById("burger").addEventListener("click", function () {
-    document.querySelector(".header").classList.toggle("open");
+    header.classList.toggle("open");
+    document.body.classList.toggle(
+      "show-burger",
+      header.classList.contains("open")
+    );
   });
-});
 
-document.getElementById("navigationList").addEventListener("click", (event) => {
-  event._isClickWithInMenu = true;
-});
+  document
+    .getElementById("navigationList")
+    .addEventListener("click", (event) => {
+      event._isClickWithInMenu = true;
+    });
 
-document.getElementById("burger").addEventListener("click", (event) => {
-  event._isClickWithInMenu = true;
-});
-
-const menuLinks = document.querySelectorAll("#navigationList a");
-menuLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    document.querySelector(".header").classList.remove("open");
+  document.getElementById("burger").addEventListener("click", (event) => {
+    event._isClickWithInMenu = true;
   });
-});
 
-document.body.addEventListener("click", (event) => {
-  if (event._isClickWithInMenu) return;
-  document.querySelector(".header").classList.remove("open");
-});
+  const menuLinks = document.querySelectorAll("#navigationList a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("open");
+      document.body.classList.remove("show-menu");
+    });
+  });
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    document.querySelector(".header").classList.remove("open");
-  }
+  document.body.addEventListener("click", (event) => {
+    if (event._isClickWithInMenu) return;
+    header.classList.remove("open");
+    document.body.classList.remove("show-menu");
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      header.classList.remove("open");
+      document.body.classList.remove("show-menu");
+    }
+  });
+
+  showMenu("coffee-menu");
 });
 
 //карусель
@@ -135,8 +148,17 @@ function toggleMenu() {
   const drink6 = document.querySelector(".drink6");
   drink6.classList.toggle("show");
 
-  const coffeeMenu = document.querySelector(".coffee_menu_content");
-  coffeeMenu.classList.toggle("additional-margin");
+  const dessert5 = document.querySelector(".dessert5");
+  dessert5.classList.toggle("show");
+
+  const dessert6 = document.querySelector(".dessert6");
+  dessert6.classList.toggle("show");
+
+  const dessert7 = document.querySelector(".dessert7");
+  dessert7.classList.toggle("show");
+
+  const dessert8 = document.querySelector(".dessert8");
+  dessert8.classList.toggle("show");
 
   const toggleButton = document.querySelector(".drink_refresh");
   toggleButton.classList.toggle("hide");
@@ -149,3 +171,52 @@ function toggleMenu() {
 }
 
 toggleMenu();
+
+function toggleMenuDessert() {
+  const dessert5 = document.querySelector(".dessert5");
+  dessert5.classList.toggle("show");
+
+  const dessert6 = document.querySelector(".dessert6");
+  dessert6.classList.toggle("show");
+
+  const dessert7 = document.querySelector(".dessert7");
+  dessert7.classList.toggle("show");
+
+  const dessert8 = document.querySelector(".dessert8");
+  dessert8.classList.toggle("show");
+
+  const toggleButtonDessert = document.querySelector(".dessert_refresh");
+  toggleButtonDessert.classList.toggle("hide");
+
+  if (toggleButtonDessert.classList.contains("hide")) {
+    toggleButtonDessert.style.display = "none";
+  } else {
+    toggleButtonDessert.style.display = "block";
+  }
+}
+
+toggleMenuDessert();
+
+//смена меню
+
+function showMenu(menuId) {
+  var containers = document.getElementsByClassName("menu-container");
+  for (var i = 0; i < containers.length; i++) {
+    containers[i].style.display = "none";
+  }
+
+  var selectedMenu = document.getElementById(menuId);
+  if (selectedMenu) {
+    selectedMenu.style.display = "flex";
+  }
+
+  var menuBtns = document.querySelectorAll(".menu-btn");
+  menuBtns.forEach((div) => {
+    div.classList.remove("active");
+  });
+
+  var selectedBtn = document.querySelector(`.menu-btn[data-menu="${menuId}"]`);
+  if (selectedBtn) {
+    selectedBtn.classList.add("active");
+  }
+}

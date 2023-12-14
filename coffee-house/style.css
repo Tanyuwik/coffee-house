@@ -156,6 +156,10 @@ body {
   transform: translate(0, -4px) rotate(-45deg);
 }
 
+.show-burger {
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .button_coffee {
     display: none;
@@ -192,7 +196,7 @@ body {
   }
 
   .navigationList {
-    position: absolute;
+    position: fixed;
     top: 83px;
     right: -775px;
     display: flex;
@@ -202,7 +206,7 @@ body {
     box-sizing: border-box;
     padding: 60px 19px 150px 0;
     width: 100vh;
-    height: auto;
+    height: 100vh;
     z-index: 5;
     background-color: var(--background-body);
     transition: 2s;
@@ -1077,12 +1081,18 @@ footer button {
   padding: 0 19px 0 9px;
   height: 47px;
   border-radius: 100px;
-  background: var(--background-container);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: -5px;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.menu-btn.active {
+  background: var(--background-container);
+  cursor: context-menu;
 }
 
 .coffee_store,
@@ -1098,18 +1108,30 @@ footer button {
   width: 30px;
   height: 30px;
   border-radius: 100px;
-  background: var(--background-body);
+  background: var(--border-light);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.active .coffee_img,
+.active .tea_img,
+.active .dessert_img {
+  background: var(--background-body);
+}
+
 .coffee_name {
-  color: var(--text-light);
+  color: var(--text-dark);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
   padding: 0;
+}
+
+.active .coffee_name,
+.active .tea_name,
+.active .dessert_name {
+  color: var(--text-light);
 }
 
 .tea_button,
@@ -1145,14 +1167,23 @@ footer button {
   line-height: 150%;
 }
 
-.coffee_menu_content {
+.coffee_menu_content,
+.tea_menu_content,
+.dessert_menu_content {
   display: flex;
   max-width: 1360px;
-  height: 1057px;
+  height: 100%;
   gap: 37px;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   padding-bottom: 4px;
+  justify-content: center;
+  transition: all 1s ease;
+}
+
+.tea_menu_content,
+.dessert_menu_content {
+  display: none;
 }
 
 .drink1,
@@ -1162,7 +1193,15 @@ footer button {
 .drink5,
 .drink6,
 .drink7,
-.drink8 {
+.drink8,
+.dessert1,
+.dessert2,
+.dessert3,
+.dessert4,
+.dessert5,
+.dessert6,
+.dessert7,
+.dessert8 {
   width: 310px;
   border-radius: 40px;
   border: 1px solid var(--border-light);
@@ -1241,7 +1280,8 @@ footer button {
   line-height: 125%;
 }
 
-.drink_refresh {
+.drink_refresh,
+.dessert_refresh {
   display: none;
   width: 60px;
   height: 60px;
@@ -1250,46 +1290,11 @@ footer button {
   background-color: transparent;
 }
 
-.coffee_menu_content.additional-margin {
-  margin-bottom: 165%;
-}
-
-@media (max-width: 1420px) {
-
-  .drink2,
-  .drink6 {
-    display: none;
-  }
-
-  .drink_refresh {
-    width: 300px;
-    display: block;
-    margin: auto;
-    text-align: center;
-  }
-}
 
 @media (max-width: 1068px) {
   .coffee_menu_content {
     justify-content: center;
     flex-direction: row;
-    margin-bottom: 78px;
-  }
-
-  .drink4,
-  .drink8 {
-    display: none;
-  }
-
-  .drink4.show,
-  .drink8.show,
-  .drink2.show,
-  .drink6.show {
-    display: block;
-  }
-
-  .drink_refresh img {
-    margin-top: -14px;
   }
 }
 
@@ -1298,13 +1303,51 @@ footer button {
     width: 688px;
   }
 
+  .drink_refresh,
+  .dessert_refresh {
+    width: 300px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
   .coffee_menu_content {
     margin-bottom: 38px;
   }
-}
 
- 
- 
+  .tea_menu_content .drink2,
+  .tea_menu_content .drink4 {
+    display: block;
+  }
+
+  .drink2,
+  .drink6,
+  .drink4,
+  .drink8 {
+    display: none;
+  }
+
+  .dessert5,
+  .dessert6,
+  .dessert7,
+  .dessert8 {
+    display: none;
+  }
+
+  .dessert5.show,
+  .dessert6.show,
+  .dessert7.show,
+  .dessert8.show {
+    display: block;
+  }
+
+  .drink4.show,
+  .drink8.show,
+  .drink2.show,
+  .drink6.show {
+    display: block;
+  }
+}
 
 @media (max-width: 741px) {
   .coffee_menu_info {
@@ -1439,19 +1482,22 @@ footer button {
   }
 
   .tea_button:hover,
-  .dessert_button:hover {
+  .dessert_button:hover,
+  .coffee_button:hover {
     background-color: var(--background-container);
     transition: all 1s ease;
   }
 
   .tea_button:hover p,
-  .dessert_button:hover p {
+  .dessert_button:hover p,
+  .coffee_button:hover p {
     color: var(--text-light);
     transition: all 1s ease;
   }
 
   .tea_button:hover .tea_img,
-  .dessert_button:hover .dessert_img {
+  .dessert_button:hover .dessert_img,
+  .coffee_button:hover .coffee_img {
     background-color: var(--background-body);
     transition: all 1s ease;
   }
@@ -1463,7 +1509,15 @@ footer button {
   .drink5:hover img,
   .drink6:hover img,
   .drink7:hover img,
-  .drink8:hover img {
+  .drink8:hover img,
+  .dessert1:hover img,
+  .dessert2:hover img,
+  .dessert3:hover img,
+  .dessert4:hover img,
+  .dessert5:hover img,
+  .dessert6:hover img,
+  .dessert7:hover img,
+  .dessert8:hover img {
     transform: scale(1);
   }
 }
@@ -1557,24 +1611,6 @@ footer button {
     width: 0;
   }
 
-  .tea_button:hover,
-  .dessert_button:hover {
-    background-color: transparent;
-    transition: none;
-  }
-
-  .tea_button:hover p,
-  .dessert_button:hover p {
-    color: var(--text-dark);
-    transition: none;
-  }
-
-  .tea_button:hover .tea_img,
-  .dessert_button:hover .dessert_img {
-    background-color: var(--border-light);
-    transition: none;
-  }
-
   .drink1:hover img,
   .drink2:hover img,
   .drink3:hover img,
@@ -1582,7 +1618,15 @@ footer button {
   .drink5:hover img,
   .drink6:hover img,
   .drink7:hover img,
-  .drink8:hover img {
+  .drink8:hover img,
+  .dessert1:hover img,
+  .dessert2:hover img,
+  .dessert3:hover img,
+  .dessert4:hover img,
+  .dessert5:hover img,
+  .dessert6:hover img,
+  .dessert7:hover img,
+  .dessert8:hover img {
     transform: scale(1.1);
   }
 }
