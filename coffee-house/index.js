@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "show-burger",
       header.classList.contains("open")
     );
+    document.body.classList.remove("show-burger");
   });
 
   document
