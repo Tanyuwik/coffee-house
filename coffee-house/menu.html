@@ -54,7 +54,7 @@
           <h1>Behind each of our cups hides an <span>amazing surprise</span></h1>
         </div>
         <div class="coffee_menu_input">
-          <div class="coffee_button">
+          <div class="coffee_button menu-btn" data-menu="coffee-menu" onclick="showMenu('coffee-menu')">
             <div class="coffee_store">
               <span class="coffee_img">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@
               <p class="coffee_name">Coffee</p>
             </div>
           </div>
-          <div class="tea_button">
+          <div class="tea_button menu-btn" data-menu="tea-menu" onclick="showMenu('tea-menu')">
             <div class="tea_store">
               <div class="tea_img">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@
               <p class="tea_name">Tea</p>
             </div>
           </div>
-          <div class="dessert_button">
+          <div class="dessert_button menu-btn" data-menu="dessert-menu" onclick="showMenu('dessert-menu')">
             <div class="dessert_store">
               <div class="dessert_img">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="coffee_menu_content">
+        <div class="coffee_menu_content menu-container" id="coffee-menu">
           <div class="drink1">
             <div class="coffee">
               <img src="images/coffee/coffee-1.jpg" alt="coffee1">
@@ -206,10 +206,167 @@
               <p class="menu_content_price">$6.50</p>
             </div>
           </div>
+
+          <button class="drink_refresh" onclick="toggleMenu()">
+            <img src="images/icon/button-icon-dark.svg" alt="refresh">
+          </button>
         </div>
-        <button class="drink_refresh" onclick="toggleMenu()">
-          <img src="images/icon/button-icon-dark.svg" alt="refresh">
-        </button>
+
+        <div class="tea_menu_content menu-container" id="tea-menu">
+          <div class="drink1">
+            <div class="coffee">
+              <img src="images/tea/tea-1.png" alt="tea1">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Moroccan</p>
+                <p class="menu_content_info">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon
+                  and mint</p>
+              </div>
+              <p class="menu_content_price1">$4.50</p>
+            </div>
+          </div>
+          <div class="drink2">
+            <div class="coffee">
+              <img src="images/tea/tea-2.png" alt="tea2">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Ginger</p>
+                <p class="menu_content_info">Original black tea with fresh ginger, lemon and honey</p>
+              </div>
+              <p class="menu_content_price">$5.00</p>
+            </div>
+          </div>
+          <div class="drink3">
+            <div class="coffee">
+              <img src="images/tea/tea-3.png" alt="tea3">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Cranberry</p>
+                <p class="menu_content_info">Invigorating black tea with cranberry and honey</p>
+              </div>
+              <p class="menu_content_price">$5.00</p>
+            </div>
+          </div>
+          <div class="drink4">
+            <div class="coffee">
+              <img src="images/tea/tea-4.png" alt="coffee6">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Sea buckthorn</p>
+                <p class="menu_content_info">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+              </div>
+              <p class="menu_content_price1">$5.50</p>
+            </div>
+          </div>
+        </div>
+        <div class="dessert_menu_content menu-container" id="dessert-menu">
+          <div class="dessert1">
+            <div class="coffee">
+              <img src="images/dessert/dessert-1.png" alt="dessert1">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Marble cheesecake</p>
+                <p class="menu_content_info">Philadelphia cheese with lemon zest on a light sponge cake and red currant
+                  jam</p>
+              </div>
+              <p class="menu_content_price1">$3.50</p>
+            </div>
+          </div>
+          <div class="dessert2">
+            <div class="coffee">
+              <img src="images/dessert/dessert-2.png" alt="dessert2">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Red velvet</p>
+                <p class="menu_content_info">Layer cake with cream cheese frosting</p>
+              </div>
+              <p class="menu_content_price">$4.00</p>
+            </div>
+          </div>
+          <div class="dessert3">
+            <div class="coffee">
+              <img src="images/dessert/dessert-3.png" alt="dessert3">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Cheesecakes</p>
+                <p class="menu_content_info">Soft cottage cheese pancakes with sour cream and fresh berries and
+                  sprinkled with powdered sugar</p>
+              </div>
+              <p class="menu_content_price1">$4.50</p>
+            </div>
+          </div>
+          <div class="dessert4">
+            <div class="coffee">
+              <img src="images/dessert/dessert-4.png" alt="dessert4">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Creme brulee</p>
+                <p class="menu_content_info">Delicate creamy dessert in a caramel basket with wild berries</p>
+              </div>
+              <p class="menu_content_price">$4.00</p>
+            </div>
+          </div>
+          <div class="dessert5">
+            <div class="coffee">
+              <img src="images/dessert/dessert-5.png" alt="dessert5">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Pancakes</p>
+                <p class="menu_content_info">Tender pancakes with strawberry jam and fresh strawberries</p>
+              </div>
+              <p class="menu_content_price">$4.50</p>
+            </div>
+          </div>
+          <div class="dessert6">
+            <div class="coffee">
+              <img src="images/dessert/dessert-6.png" alt="dessert6">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Honey cake</p>
+                <p class="menu_content_info">Classic honey cake with delicate custard</p>
+              </div>
+              <p class="menu_content_price">$4.50</p>
+            </div>
+          </div>
+          <div class="dessert7">
+            <div class="coffee">
+              <img src="images/dessert/dessert-7.png" alt="dessert7">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Chocolate cake</p>
+                <p class="menu_content_info">Cake with hot chocolate filling and nuts with dried apricots</p>
+              </div>
+              <p class="menu_content_price">$5.50</p>
+            </div>
+          </div>
+          <div class="dessert8">
+            <div class="coffee">
+              <img src="images/dessert/dessert-8.png" alt="dessert8">
+            </div>
+            <div class="menu_content_drink">
+              <div class="menu_content_title">
+                <p class="menu_content_name">Black forest</p>
+                <p class="menu_content_info">A combination of thin sponge cake with cherry jam and light chocolate
+                  mousse</p>
+              </div>
+              <p class="menu_content_price1">$6.50</p>
+            </div>
+          </div>
+          <button class="dessert_refresh" onclick="toggleMenuDessert()">
+            <img src="images/icon/button-icon-dark.svg" alt="refresh">
+          </button>
+        </div>
       </section>
     </main>
     <footer id="contact">
