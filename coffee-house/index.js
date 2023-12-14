@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
- 
-
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       header.classList.remove("open");
@@ -36,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  showMenu("coffee-burger");
+  showMenu("coffee-menu");
 });
 
 //карусель
